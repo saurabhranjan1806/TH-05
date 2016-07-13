@@ -1,0 +1,9 @@
+<div align="center">
+<h1><%=@question.title%></h1>
+<h2><%=@question.description%></h2>
+<%= form_tag("/questions/#{@question.id}/submit", method: "post") do %>
+  <%= label_tag(:answer, "Answer:") %>
+  <%= text_field_tag(:answer) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+</div>
